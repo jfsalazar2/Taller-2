@@ -431,7 +431,7 @@ class TestSandboxListas
     @Test
     void testReiniciarArregloCadenas( )
     {
-        Object[] nuevosValores = new Object[]{ new Double( "0.01" ), new Character( 'a' ), "Hello", new Integer( "25" ), new Boolean( false ) };
+        Object[] nuevosValores = new Object[]{ Double.valueOf( "0.01" ), Character.valueOf( 'a' ), "Hello", Integer.valueOf( "25" ), Boolean.valueOf( "false" ) };
         List<Object> objetos = Arrays.asList( nuevosValores );
 
         sencillo.reiniciarArregloCadenas( objetos );

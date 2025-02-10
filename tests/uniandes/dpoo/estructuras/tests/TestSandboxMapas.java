@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -189,7 +190,7 @@ class TestSandboxMapas
     void testReiniciarConjuntoCadenas( )
     {
         String[] nuevosValores = "Esta es una prueba con cadenas y con cadenas y con cadenas!".split( " " );
-        sencillo.reiniciarMapaCadenas( Arrays.asList( nuevosValores ) );
+        sencillo.reiniciarMapaCadenas(new ArrayList<>(Arrays.asList( nuevosValores )) );
         assertEquals( 8, sencillo.getCantidadCadenasDiferentes( ), "La nueva cantidad de cadenas no es la correcta" );
     }
 
